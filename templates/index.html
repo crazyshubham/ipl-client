@@ -23,7 +23,6 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-
         html { scroll-behavior: smooth; }
 
         body {
@@ -35,7 +34,6 @@
             overflow-x: hidden;
         }
 
-        /* ── Animated background ── */
         body::before {
             content: '';
             position: fixed;
@@ -48,7 +46,6 @@
             z-index: 0;
         }
 
-        /* ── Grid overlay ── */
         body::after {
             content: '';
             position: fixed;
@@ -63,7 +60,6 @@
 
         .wrapper { position: relative; z-index: 1; }
 
-        /* ── HEADER ── */
         header {
             padding: 0 40px;
             border-bottom: 1px solid var(--border);
@@ -83,11 +79,7 @@
             height: 72px;
         }
 
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-        }
+        .logo { display: flex; align-items: center; gap: 14px; }
 
         .logo-icon {
             width: 44px;
@@ -143,7 +135,6 @@
             background: rgba(255,215,0,0.06);
         }
 
-        /* ── HERO ── */
         .hero {
             padding: 80px 40px 60px;
             text-align: center;
@@ -206,7 +197,6 @@
             animation: fadeSlideDown 0.6s 0.2s ease both;
         }
 
-        /* ── TABS ── */
         .tabs-section {
             max-width: 1300px;
             margin: 0 auto;
@@ -237,7 +227,6 @@
             cursor: pointer;
             transition: all 0.25s;
             text-transform: uppercase;
-            position: relative;
         }
 
         .tab.active {
@@ -246,7 +235,6 @@
             box-shadow: 0 4px 20px rgba(255,215,0,0.3);
         }
 
-        /* ── CARDS ── */
         .card {
             background: var(--surface);
             border: 1px solid var(--border);
@@ -282,7 +270,6 @@
             margin-bottom: 32px;
         }
 
-        /* ── FORM ── */
         .form-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -290,11 +277,7 @@
             margin-bottom: 28px;
         }
 
-        .form-group {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
+        .form-group { display: flex; flex-direction: column; gap: 10px; }
 
         .form-group label {
             font-size: 12px;
@@ -330,15 +313,9 @@
             background-color: var(--surface2);
         }
 
-        .form-group input {
-            background-image: none;
-        }
+        .form-group input { background-image: none; }
+        .form-group select option { background: var(--bg2); }
 
-        .form-group select option {
-            background: var(--bg2);
-        }
-
-        /* ── BUTTON ── */
         .btn-primary {
             padding: 16px 40px;
             background: linear-gradient(135deg, var(--gold) 0%, #ffb300 100%);
@@ -355,24 +332,13 @@
             overflow: hidden;
         }
 
-        .btn-primary::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, rgba(255,255,255,0.2), transparent);
-            opacity: 0;
-            transition: opacity 0.2s;
-        }
-
         .btn-primary:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 40px rgba(255,215,0,0.4);
         }
 
-        .btn-primary:hover::after { opacity: 1; }
         .btn-primary:active { transform: translateY(0); }
 
-        /* ── VS DIVIDER ── */
         .vs-divider {
             display: flex;
             align-items: center;
@@ -386,21 +352,16 @@
             grid-column: 1/-1;
         }
 
-        .vs-divider::before,
-        .vs-divider::after {
+        .vs-divider::before, .vs-divider::after {
             content: '';
             flex: 1;
             height: 1px;
             background: linear-gradient(90deg, transparent, var(--border));
         }
 
-        .vs-divider::after {
-            background: linear-gradient(270deg, transparent, var(--border));
-        }
-
+        .vs-divider::after { background: linear-gradient(270deg, transparent, var(--border)); }
         .vs-divider span { padding: 0 20px; }
 
-        /* ── RESULT ── */
         .result-section {
             margin-top: 36px;
             animation: fadeSlideUp 0.5s ease both;
@@ -432,21 +393,14 @@
             transition: transform 0.2s, border-color 0.2s;
         }
 
-        .stat-box:hover {
-            transform: translateY(-3px);
-            border-color: rgba(255,215,0,0.35);
-        }
+        .stat-box:hover { transform: translateY(-3px); border-color: rgba(255,215,0,0.35); }
 
-        .stat-box.winner {
-            border-color: var(--gold);
-            background: rgba(255,215,0,0.05);
-        }
+        .stat-box.winner { border-color: var(--gold); background: rgba(255,215,0,0.05); }
 
         .stat-box.winner::after {
             content: '👑';
             position: absolute;
-            top: 8px;
-            right: 10px;
+            top: 8px; right: 10px;
             font-size: 14px;
         }
 
@@ -483,7 +437,6 @@
             letter-spacing: 0.5px;
         }
 
-        /* ── RECORD RESULT ── */
         .record-card {
             background: var(--bg2);
             border: 1px solid var(--border);
@@ -519,9 +472,7 @@
             color: var(--gold);
         }
 
-        .progress-bar-wrap {
-            margin-bottom: 14px;
-        }
+        .progress-bar-wrap { margin-bottom: 14px; }
 
         .progress-label {
             display: flex;
@@ -550,7 +501,6 @@
         .fill-crimson { background: linear-gradient(90deg, #8b0015, var(--crimson)); }
         .fill-blue { background: linear-gradient(90deg, #003, var(--navy)); }
 
-        /* ── PLAYER STATS ── */
         .player-stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -586,13 +536,7 @@
             margin-top: 4px;
         }
 
-        /* ── LOADING ── */
-        .loading {
-            display: none;
-            text-align: center;
-            padding: 40px;
-        }
-
+        .loading { display: none; text-align: center; padding: 40px; }
         .loading.active { display: block; }
 
         .spinner {
@@ -613,7 +557,6 @@
             font-weight: 600;
         }
 
-        /* ── ERROR ── */
         .error-msg {
             display: none;
             padding: 16px 20px;
@@ -629,11 +572,9 @@
 
         .error-msg.active { display: block; }
 
-        /* ── TABS PANELS ── */
         .tab-panel { display: none; }
         .tab-panel.active { display: block; }
 
-        /* ── FOOTER ── */
         footer {
             border-top: 1px solid var(--border);
             padding: 32px 40px;
@@ -647,11 +588,9 @@
 
         footer span { color: var(--gold); }
 
-        /* ── DECORATIVE ── */
         .deco-number {
             position: absolute;
-            top: 20px;
-            right: 30px;
+            top: 20px; right: 30px;
             font-family: 'Bebas Neue', cursive;
             font-size: 120px;
             color: rgba(255,215,0,0.03);
@@ -661,7 +600,6 @@
             line-height: 1;
         }
 
-        /* ── ANIMATIONS ── */
         @keyframes fadeSlideDown {
             from { opacity: 0; transform: translateY(-16px); }
             to { opacity: 1; transform: translateY(0); }
@@ -672,16 +610,13 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
+        @keyframes spin { to { transform: rotate(360deg); } }
 
         @keyframes pulse {
             0%, 100% { opacity: 1; transform: scale(1); }
             50% { opacity: 0.4; transform: scale(0.8); }
         }
 
-        /* ── RESPONSIVE ── */
         @media (max-width: 768px) {
             header { padding: 0 20px; }
             .hero { padding: 50px 20px 40px; }
@@ -696,10 +631,8 @@
     </style>
 </head>
 <body>
-
 <div class="wrapper">
 
-    <!-- HEADER -->
     <header>
         <div class="header-inner">
             <div class="logo">
@@ -717,14 +650,12 @@
         </div>
     </header>
 
-    <!-- HERO -->
     <section class="hero">
         <div class="hero-badge">🏏 IPL Data Analytics Platform</div>
         <h1>The Arena <span>Never Lies</span></h1>
         <p>Head-to-head records · Player stats · Team performance — all in one place</p>
     </section>
 
-    <!-- TABS SECTION -->
     <section class="tabs-section" id="tabs">
         <div class="tabs">
             <button class="tab active" onclick="switchTab('tvt', this)">⚔ Team vs Team</button>
@@ -733,37 +664,26 @@
             <button class="tab" onclick="switchTab('bowl', this)">🎯 Bowler</button>
         </div>
 
-        <!-- TAB: TEAM VS TEAM -->
+        <!-- TEAM VS TEAM -->
         <div class="tab-panel active" id="tvt">
             <div class="card">
                 <div class="deco-number">VS</div>
                 <div class="card-title">Team vs Team</div>
                 <div class="card-sub">Head-to-Head Battle Record</div>
-
                 <div class="form-grid">
                     <div class="form-group">
                         <label>Select Team 1</label>
-                        <select id="tvt-team1">
-                            <option value="">— Choose Team —</option>
-                        </select>
+                        <select id="tvt-team1"><option value="">— Choose Team —</option></select>
                     </div>
                     <div class="form-group">
                         <label>Select Team 2</label>
-                        <select id="tvt-team2">
-                            <option value="">— Choose Team —</option>
-                        </select>
+                        <select id="tvt-team2"><option value="">— Choose Team —</option></select>
                     </div>
                     <div class="vs-divider"><span>VS</span></div>
                 </div>
-
                 <button class="btn-primary" onclick="fetchTVT()">⚔ Compare Teams</button>
-
-                <div class="loading" id="tvt-loading">
-                    <div class="spinner"></div>
-                    <p>Fetching battle records...</p>
-                </div>
+                <div class="loading" id="tvt-loading"><div class="spinner"></div><p>Fetching battle records...</p></div>
                 <div class="error-msg" id="tvt-error"></div>
-
                 <div class="result-section" id="tvt-result" style="display:none">
                     <div class="result-label">📊 Battle Summary</div>
                     <div class="result-grid" id="tvt-grid"></div>
@@ -771,75 +691,58 @@
             </div>
         </div>
 
-        <!-- TAB: TEAM RECORD -->
+        <!-- TEAM RECORD -->
         <div class="tab-panel" id="team">
             <div class="card">
                 <div class="deco-number">XI</div>
                 <div class="card-title">Team Record</div>
                 <div class="card-sub">Overall & Head-to-Head Performance</div>
-
                 <div class="form-grid" style="grid-template-columns:1fr auto;align-items:end;">
                     <div class="form-group">
                         <label>Select Team</label>
-                        <select id="team-select">
-                            <option value="">— Choose Team —</option>
-                        </select>
+                        <select id="team-select"><option value="">— Choose Team —</option></select>
                     </div>
                     <button class="btn-primary" onclick="fetchTeam()" style="height:52px;margin-bottom:0">Search</button>
                 </div>
-
-                <div class="loading" id="team-loading">
-                    <div class="spinner"></div>
-                    <p>Loading team data...</p>
-                </div>
+                <div class="loading" id="team-loading"><div class="spinner"></div><p>Loading team data...</p></div>
                 <div class="error-msg" id="team-error"></div>
                 <div id="team-result"></div>
             </div>
         </div>
 
-        <!-- TAB: BATSMAN -->
+        <!-- BATSMAN -->
         <div class="tab-panel" id="bat">
             <div class="card">
                 <div class="deco-number">100</div>
                 <div class="card-title">Batsman Stats</div>
                 <div class="card-sub">Career Batting Performance</div>
-
                 <div class="form-grid" style="grid-template-columns:1fr auto;align-items:end;">
                     <div class="form-group">
                         <label>Batsman Name</label>
-                        <input type="text" id="bat-input" placeholder="e.g. V Kohli" />
+                        <input type="text" id="bat-input" placeholder="e.g. V Kohli" onkeydown="if(event.key==='Enter') fetchBatsman()" />
                     </div>
                     <button class="btn-primary" onclick="fetchBatsman()" style="height:52px">Search</button>
                 </div>
-
-                <div class="loading" id="bat-loading">
-                    <div class="spinner"></div>
-                    <p>Fetching batting records...</p>
-                </div>
+                <div class="loading" id="bat-loading"><div class="spinner"></div><p>Fetching batting records...</p></div>
                 <div class="error-msg" id="bat-error"></div>
                 <div id="bat-result"></div>
             </div>
         </div>
 
-        <!-- TAB: BOWLER -->
+        <!-- BOWLER -->
         <div class="tab-panel" id="bowl">
             <div class="card">
                 <div class="deco-number">🎯</div>
                 <div class="card-title">Bowler Stats</div>
                 <div class="card-sub">Career Bowling Performance</div>
-
                 <div class="form-grid" style="grid-template-columns:1fr auto;align-items:end;">
                     <div class="form-group">
                         <label>Bowler Name</label>
-                        <input type="text" id="bowl-input" placeholder="e.g. JJ Bumrah" />
+                        <input type="text" id="bowl-input" placeholder="e.g. JJ Bumrah" onkeydown="if(event.key==='Enter') fetchBowler()" />
                     </div>
                     <button class="btn-primary" onclick="fetchBowler()" style="height:52px">Search</button>
                 </div>
-
-                <div class="loading" id="bowl-loading">
-                    <div class="spinner"></div>
-                    <p>Fetching bowling records...</p>
-                </div>
+                <div class="loading" id="bowl-loading"><div class="spinner"></div><p>Fetching bowling records...</p></div>
                 <div class="error-msg" id="bowl-error"></div>
                 <div id="bowl-result"></div>
             </div>
@@ -852,13 +755,36 @@
 </div>
 
 <script>
-   const API = '{{ api_base }}';
+    const API = '{{ api_base }}';
 
-    // ── Populate team dropdowns ──
+    // ── Safe JSON parse — handles Infinity and NaN ──
+    function safeParseJSON(text) {
+        try {
+            return JSON.parse(
+                text
+                    .replace(/:\s*Infinity/g, ': null')
+                    .replace(/:\s*-Infinity/g, ': null')
+                    .replace(/:\s*NaN/g, ': null')
+            );
+        } catch(e) {
+            return null;
+        }
+    }
+
+    // ── Safe fetch wrapper ──
+    async function safeFetch(url) {
+        const res = await fetch(url);
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const text = await res.text();
+        const data = safeParseJSON(text);
+        if (!data) throw new Error('Invalid JSON response');
+        return data;
+    }
+
+    // ── Load teams ──
     async function loadTeams() {
         try {
-            const res = await fetch(`${API}/api/teams`);
-            const data = await res.json();
+            const data = await safeFetch(`${API}/api/teams`);
             const teams = data.teams.sort();
             ['tvt-team1', 'tvt-team2', 'team-select'].forEach(id => {
                 const sel = document.getElementById(id);
@@ -869,7 +795,7 @@
                     sel.appendChild(opt);
                 });
             });
-        } catch (e) {
+        } catch(e) {
             console.warn('Could not load teams:', e);
         }
     }
@@ -898,9 +824,39 @@
     }
 
     function showError(id, msg) {
+        hideLoading(id);
         const el = document.getElementById(id + '-error');
         el.textContent = '⚠ ' + msg;
         el.classList.add('active');
+    }
+
+    function fmt(val) {
+        if (val === null || val === undefined) return '—';
+        if (typeof val === 'number') {
+            if (!isFinite(val)) return '—';
+            return Number.isInteger(val) ? val : val.toFixed(2);
+        }
+        return val;
+    }
+
+    function pstat(val, label) {
+        return `<div class="player-stat">
+            <span class="ps-num">${fmt(val)}</span>
+            <span class="ps-label">${label}</span>
+        </div>`;
+    }
+
+    function shortName(team) {
+        const map = {
+            'Mumbai Indians': 'MI', 'Chennai Super Kings': 'CSK',
+            'Royal Challengers Bangalore': 'RCB', 'Royal Challengers Bengaluru': 'RCB',
+            'Kolkata Knight Riders': 'KKR', 'Sunrisers Hyderabad': 'SRH',
+            'Delhi Capitals': 'DC', 'Delhi Daredevils': 'DD',
+            'Rajasthan Royals': 'RR', 'Punjab Kings': 'PBKS',
+            'Kings XI Punjab': 'KXIP', 'Lucknow Super Giants': 'LSG',
+            'Gujarat Titans': 'GT',
+        };
+        return map[team] || team.split(' ').map(w => w[0]).join('').slice(0, 4);
     }
 
     // ── Team vs Team ──
@@ -915,8 +871,7 @@
 
         showLoading('tvt');
         try {
-            const res = await fetch(`${API}/api/teamvteam?team1=${encodeURIComponent(t1)}&team2=${encodeURIComponent(t2)}`);
-            const data = await res.json();
+            const data = await safeFetch(`${API}/api/teamvteam?team1=${encodeURIComponent(t1)}&team2=${encodeURIComponent(t2)}`);
             hideLoading('tvt');
 
             if (data.message) return showError('tvt', data.message);
@@ -950,9 +905,8 @@
                 </div>
             `;
             resultEl.style.display = 'block';
-        } catch (e) {
-            hideLoading('tvt');
-            showError('tvt', 'Could not connect to API. Make sure the API server is running on port 5000.');
+        } catch(e) {
+            showError('tvt', 'Could not connect to API. Please try again.');
         }
     }
 
@@ -966,8 +920,7 @@
 
         showLoading('team');
         try {
-            const res = await fetch(`${API}/api/team-record?team=${encodeURIComponent(team)}`);
-            const data = await res.json();
+            const data = await safeFetch(`${API}/api/team-record?team=${encodeURIComponent(team)}`);
             hideLoading('team');
 
             const rec = data[team]?.overall;
@@ -986,28 +939,15 @@
                         <div class="progress-bar"><div class="progress-fill fill-gold" style="width:${winPct}%"></div></div>
                     </div>
                     <div class="result-grid" style="grid-template-columns:repeat(4,1fr);gap:12px;margin-top:20px">
-                        <div class="stat-box">
-                            <span class="stat-num">${rec.matchesplayed}</span>
-                            <span class="stat-label">Played</span>
-                        </div>
-                        <div class="stat-box winner">
-                            <span class="stat-num">${rec.won}</span>
-                            <span class="stat-label">Won</span>
-                        </div>
-                        <div class="stat-box">
-                            <span class="stat-num">${rec.loss}</span>
-                            <span class="stat-label">Lost</span>
-                        </div>
-                        <div class="stat-box">
-                            <span class="stat-num">${rec.noResult}</span>
-                            <span class="stat-label">No Result</span>
-                        </div>
+                        <div class="stat-box"><span class="stat-num">${rec.matchesplayed}</span><span class="stat-label">Played</span></div>
+                        <div class="stat-box winner"><span class="stat-num">${rec.won}</span><span class="stat-label">Won</span></div>
+                        <div class="stat-box"><span class="stat-num">${rec.loss}</span><span class="stat-label">Lost</span></div>
+                        <div class="stat-box"><span class="stat-num">${rec.noResult}</span><span class="stat-label">No Result</span></div>
                     </div>
                 </div>
             `;
-        } catch (e) {
-            hideLoading('team');
-            showError('team', 'Could not connect to API. Make sure the API server is running on port 5000.');
+        } catch(e) {
+            showError('team', 'Could not connect to API. Please try again.');
         }
     }
 
@@ -1021,15 +961,12 @@
 
         showLoading('bat');
         try {
-            const res = await fetch(`${API}/api/batting-record?batsman=${encodeURIComponent(name)}`);
-            const data = await res.json();
+            const data = await safeFetch(`${API}/api/batting-record?batsman=${encodeURIComponent(name)}`);
             hideLoading('bat');
 
             const rec = data[name]?.all;
-            if (!rec || rec.innings === 0) return showError('bat', 'No batting record found. Check the name spelling.');
-
-            const avg = isFinite(rec.avg) ? parseFloat(rec.avg).toFixed(2) : '∞';
-            const sr = parseFloat(rec.strikeRate).toFixed(2);
+            if (!rec) return showError('bat', 'No record found. Check the name spelling (e.g. V Kohli, RG Sharma).');
+            if (rec.innings === 0) return showError('bat', 'No batting innings found for this player.');
 
             resultEl.innerHTML = `
                 <div class="record-card">
@@ -1040,8 +977,8 @@
                     <div class="player-stats-grid">
                         ${pstat(rec.innings, 'Innings')}
                         ${pstat(rec.runs, 'Runs')}
-                        ${pstat(avg, 'Average')}
-                        ${pstat(sr, 'Strike Rate')}
+                        ${pstat(rec.avg, 'Average')}
+                        ${pstat(rec.strikeRate, 'Strike Rate')}
                         ${pstat(rec.highestScore, 'Best Score')}
                         ${pstat(rec.fifties, 'Fifties')}
                         ${pstat(rec.hundreds, 'Hundreds')}
@@ -1051,9 +988,8 @@
                     </div>
                 </div>
             `;
-        } catch (e) {
-            hideLoading('bat');
-            showError('bat', 'Could not connect to API. Make sure the API server is running on port 5000.');
+        } catch(e) {
+            showError('bat', 'Could not connect to API. Please try again.');
         }
     }
 
@@ -1067,16 +1003,12 @@
 
         showLoading('bowl');
         try {
-            const res = await fetch(`${API}/api/bowling-record?bowler=${encodeURIComponent(name)}`);
-            const data = await res.json();
+            const data = await safeFetch(`${API}/api/bowling-record?bowler=${encodeURIComponent(name)}`);
             hideLoading('bowl');
 
             const rec = data[name]?.all;
-            if (!rec || rec.innings === 0) return showError('bowl', 'No bowling record found. Check the name spelling.');
-
-            const avg = isFinite(rec.avg) ? parseFloat(rec.avg).toFixed(2) : '∞';
-            const sr = isFinite(rec.strikeRate) ? parseFloat(rec.strikeRate).toFixed(2) : '∞';
-            const eco = parseFloat(rec.economy).toFixed(2);
+            if (!rec) return showError('bowl', 'No record found. Check the name spelling (e.g. JJ Bumrah, B Kumar).');
+            if (rec.innings === 0) return showError('bowl', 'No bowling innings found for this player.');
 
             resultEl.innerHTML = `
                 <div class="record-card">
@@ -1087,9 +1019,9 @@
                     <div class="player-stats-grid">
                         ${pstat(rec.innings, 'Innings')}
                         ${pstat(rec.wicket, 'Wickets')}
-                        ${pstat(eco, 'Economy')}
-                        ${pstat(avg, 'Average')}
-                        ${pstat(sr, 'Strike Rate')}
+                        ${pstat(rec.economy, 'Economy')}
+                        ${pstat(rec.avg, 'Average')}
+                        ${pstat(rec.strikeRate, 'Strike Rate')}
                         ${pstat(rec.best_figure, 'Best Figures')}
                         ${pstat(rec['3+W'], '3+ Wickets')}
                         ${pstat(rec.fours, 'Fours Given')}
@@ -1097,40 +1029,11 @@
                     </div>
                 </div>
             `;
-        } catch (e) {
-            hideLoading('bowl');
-            showError('bowl', 'Could not connect to API. Make sure the API server is running on port 5000.');
+        } catch(e) {
+            showError('bowl', 'Could not connect to API. Please try again.');
         }
     }
 
-    // ── Utilities ──
-    function pstat(val, label) {
-        return `<div class="player-stat">
-            <span class="ps-num">${val ?? '—'}</span>
-            <span class="ps-label">${label}</span>
-        </div>`;
-    }
-
-    function shortName(team) {
-        const map = {
-            'Mumbai Indians': 'MI',
-            'Chennai Super Kings': 'CSK',
-            'Royal Challengers Bangalore': 'RCB',
-            'Royal Challengers Bengaluru': 'RCB',
-            'Kolkata Knight Riders': 'KKR',
-            'Sunrisers Hyderabad': 'SRH',
-            'Delhi Capitals': 'DC',
-            'Delhi Daredevils': 'DD',
-            'Rajasthan Royals': 'RR',
-            'Punjab Kings': 'PBKS',
-            'Kings XI Punjab': 'KXIP',
-            'Lucknow Super Giants': 'LSG',
-            'Gujarat Titans': 'GT',
-        };
-        return map[team] || team.split(' ').map(w => w[0]).join('').slice(0,4);
-    }
-
-    // ── Init ──
     loadTeams();
 </script>
 </body>

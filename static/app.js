@@ -1,5 +1,4 @@
-const API = typeof window.__API_BASE__ !== 'undefined' ? window.__API_BASE__ : 'https://ipl-api-srwd.onrender.com';
-
+const API = 'https://ipl-api-srwd.onrender.com';
 // ── All players list (loaded once) ──
 let allPlayers = [];
 

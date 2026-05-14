@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IPL Stats Arena</title>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-    <!-- ── External stylesheet ── -->
-    <link rel="stylesheet" href="styles.css">
+   
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
 <div class="wrapper">
@@ -159,17 +159,10 @@
     </footer>
 </div>
 
-<!--
-    ── API base URL configuration ──
-    If you're using Flask's template rendering, replace the line below with:
-        <script>window.__API_BASE__ = '{{ api_base }}';</script>
-    Otherwise, set it to your API server's URL, e.g.:
-        <script>window.__API_BASE__ = 'http://localhost:5000';</script>
-    If left as an empty string, all API calls will be relative to the current origin.
--->
+
 <script>window.__API_BASE__ = '';</script>
 
-<!-- ── External JavaScript ── -->
-<script src="app.js"></script>
+
+<script src="{{ url_for('static', filename='app.js') }}"></script>
 </body>
 </html>

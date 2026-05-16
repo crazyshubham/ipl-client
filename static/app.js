@@ -1,8 +1,8 @@
-const API = 'https://ipl-api-srwd.onrender.com';
-// ── All players list (loaded once) ──
+const API = window.__API_BASE__ || 'https://ipl-api-srwd.onrender.com';
+
 let allPlayers = [];
 
-// ── Safe JSON parse — handles Infinity/NaN from API ──
+
 function safeParseJSON(text) {
     try {
         return JSON.parse(
@@ -42,7 +42,7 @@ async function loadTeams() {
     }
 }
 
-// ── Load all players once ──
+
 async function loadPlayers() {
     try {
         const data = await safeFetch(`${API}/api/players`);
@@ -57,13 +57,12 @@ async function loadPlayers() {
     }
 }
 
-// ── Open dropdown ──
+
 function openDropdown(type) {
     filterPlayers(type); // show current filtered results
     document.getElementById(type + '-list').classList.add('open');
 }
 
-// ── Close all dropdowns when clicking outside ──
 document.addEventListener('click', function(e) {
     ['bat', 'bowl'].forEach(type => {
         const wrap = document.getElementById(type + '-dropdown-wrap');
@@ -73,7 +72,7 @@ document.addEventListener('click', function(e) {
     });
 });
 
-// ── Filter players as user types ──
+
 function filterPlayers(type) {
     const input = document.getElementById(type + '-input');
     const list = document.getElementById(type + '-list');

@@ -7,7 +7,7 @@ A Flask-based web client for the IPL Stats Arena platform. Provides a beautiful,
 ## 🚀 Live Demo
 
 **Client URL:** `https://ipl-client.onrender.com`  
-**API Server:** `https://ipl-api-srwd.onrender.com`
+**API Server:** `https://ipl-api-tau.vercel.app`
 
 ---
 
@@ -60,10 +60,10 @@ pip install -r requirements.txt
 **3. Set environment variable:**
 ```bash
 # Windows
-set API_BASE_URL=https://ipl-api-srwd.onrender.com
+set API_BASE_URL=https://ipl-api-tau.vercel.app
 
 # Mac/Linux
-export API_BASE_URL=https://ipl-api-srwd.onrender.com
+export API_BASE_URL=https://ipl-api-tau.vercel.app
 ```
 
 **4. Run the app:**
@@ -95,7 +95,7 @@ gunicorn
    - **Start Command:** `gunicorn app:app`
 5. Add **Environment Variable:**
    - Key: `API_BASE_URL`
-   - Value: `https://ipl-api-srwd.onrender.com`
+   - Value: `https://ipl-api-tau.vercel.app`
 6. Deploy!
 
 ---

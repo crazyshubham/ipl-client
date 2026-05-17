@@ -1,4 +1,4 @@
-const API = window.__API_BASE__ || 'https://ipl-api-srwd.onrender.com';
+const API = window.__API_BASE__ || 'https://ipl-api-tau.vercel.app';
 
 let allPlayers = [];
 

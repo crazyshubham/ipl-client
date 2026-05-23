@@ -20,6 +20,40 @@ A Flask-based web client for the IPL Stats Arena platform. Provides a beautiful,
 - 📱 Fully responsive design
 - ⚡ Fast search with live player filtering
 
+- ## 🎮 Usage
+
+### 🆚 Team vs Team
+1. Select **"Team vs Team"** from the navigation
+2. Choose any two IPL teams from the dropdowns
+3. Hit **Search** to see full head-to-head battle history
+
+---
+
+### 🛡️ Team Record
+1. Select **"Team Record"** from the navigation
+2. Pick any IPL team from the dropdown
+3. View overall wins, losses, titles, and performance stats
+
+---
+
+### 🏏 Batsman Stats
+1. Select **"Batsman Stats"** from the navigation
+2. Type a player name in the search bar — results filter live
+3. Click on a player to view career batting stats:
+   - Runs, Average, Strike Rate, Fifties, Hundreds
+
+---
+
+### 🎯 Bowler Stats
+1. Select **"Bowler Stats"** from the navigation
+2. Type a player name in the search bar — results filter live
+3. Click on a player to view career bowling stats:
+   - Wickets, Economy, Average, Best Figures
+
+---
+
+> 💡 **Tip:** The live search filters players as you type — no need to press Enter!
+
 ---
 
 ## 📁 Project Structure
